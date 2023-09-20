@@ -24,9 +24,14 @@ background: linear-gradient(
 
 *{
   color: #231f20;
+  user-select: none;
 }
+
+@import "~react-image-gallery/styles/css/image-gallery.css";
+
 body {
   color: rgb(var(--foreground-rgb));
   background: #fff;
   font-family: 'Montserrat', 'Quicksand', sans-serif;
 }
+

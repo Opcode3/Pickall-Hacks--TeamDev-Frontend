@@ -14,8 +14,9 @@ const config: Config = {
     extend: {
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+        'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+        'beach': "url('/images/bg-beach.jpeg')",
+        'wait': "url('/images/bg-wait.jpeg')",
       },
       colors: {
         'pickall-primary':'#F99904'
