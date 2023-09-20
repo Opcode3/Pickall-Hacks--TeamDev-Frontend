@@ -14,6 +14,13 @@ export default function Home() {
   const [address, setAddress] = useState<string>('');
   const [latLng, setLatLng] = useState<null | { lat: number; lng: number }>(null);
 
+
+  const carsListing = [
+    {name: 'Alfa Romeo Giulia 20205', url:'/cars/1.jpg', price: 5000, day: 5},
+    {name: 'Toyota Camry 2023', url:'/cars/3.jpg', price: 5000, day: 6},
+    {name: 'Alfa Romeo Giulia 2019', url:'/cars/2.jpg', price: 5000, day: 2},
+  ]
+
   return (
     <>
       <UserLayout title=''>
@@ -29,9 +36,9 @@ export default function Home() {
             <div className="grid grid-cols-[250px_auto] mx-auto gap-4 w-fit">
               <section className='bg-white border px-2 my-8 rounded h-[400px]'></section>
               <section className='rounded min-h-[400px] px-2 py-8 grid gap-3 w-[800px]'>
-                <CarViewItem />
-                <CarViewItem />
-                <CarViewItem />
+                {
+                  carsListing.map( list => <CarViewItem key={list.name} name={list.name} url={list.url} price={list.price} days={list.day} />)
+                }
               </section>
             </div>
           </main>

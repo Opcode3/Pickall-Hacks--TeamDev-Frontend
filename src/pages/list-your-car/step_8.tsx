@@ -21,12 +21,6 @@ export default function Home() {
   const passwordRef = useRef<HTMLInputElement>(null)
 
 
-  const registrationFromHandler = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-
-  }
-
-
   const primaryGoal = [
     "1 hour", "2 hours", "3 hours (recommended)", "6 hours", "12 hours", "1 day"
   ]
@@ -34,6 +28,13 @@ export default function Home() {
   const tripDuration = [
     "Hourly", "1 (recommended)", "2 day", "3 day", "4 days", "5 days"
   ]
+
+
+  const submitHandler = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    alert("Unable to connect to server!")
+  };
+
 
   
 
@@ -48,7 +49,7 @@ export default function Home() {
             icon="../favicon.ico"
           />
           <main className=' min-h-[calc(100vh-410px)]'>
-            <form onSubmit={ e => registrationFromHandler(e)} className=' w-[500px] mx-auto mt-[80px] mb-[60px]'>
+            <form onSubmit={ e => submitHandler(e)} className=' w-[500px] mx-auto mt-[80px] mb-[60px]'>
               <h1 className=' text-3xl font-bold w-fit'>List your Car</h1>
               <div className="text-xs flex items-center pb-3">
                 <span className='pr-3'>7 of 8 steps</span> |

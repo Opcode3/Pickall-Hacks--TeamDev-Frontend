@@ -9,6 +9,8 @@ import InputLabel from "@/components/formControl/inputLabel";
 import CheckBox from "@/components/formControl/checkBox";
 import CheckInput from "@/components/formControl/checkInput";
 import { CarGallery } from "@/components/lists/cargallery";
+import Link from "next/link";
+import { useRouter } from "next/router";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -42,6 +44,12 @@ export default function Home() {
   ];
 
   const features: string[] = require("/public/locals/car_features.json");
+  const router = useRouter();
+
+  const submitHandler = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    router.push("/list-your-car/step_8");
+  };
 
   return (
     <>
@@ -55,7 +63,7 @@ export default function Home() {
           />
           <main className=" min-h-[calc(100vh-410px)]">
             <form
-              onSubmit={(e) => registrationFromHandler(e)}
+              onSubmit={(e) => submitHandler(e)}
               className=" w-[500px] mx-auto mt-[80px] mb-[60px]"
             >
               <h1 className=" text-3xl font-bold w-fit">List your Car</h1>

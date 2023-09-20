@@ -6,6 +6,8 @@ import Input from "@/components/formControl/input";
 import { useRef } from "react";
 import Button from "@/components/formControl/button";
 import InputLabel from "@/components/formControl/inputLabel";
+import Link from "next/link";
+import { useRouter } from "next/router";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -47,6 +49,15 @@ export default function Home() {
     "Any (recommended)",
   ];
 
+
+  const router = useRouter();
+
+  const submitHandler = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    router.push("/list-your-car/step_6");
+  };
+
+
   return (
     <>
       <UserLayout title="">
@@ -59,7 +70,7 @@ export default function Home() {
           />
           <main className=" min-h-[calc(100vh-410px)]">
             <form
-              onSubmit={(e) => registrationFromHandler(e)}
+              onSubmit={(e) => submitHandler(e)}
               className=" w-[500px] mx-auto mt-[80px] mb-[60px]"
             >
               <h1 className=" text-3xl font-bold w-fit">List your Car</h1>
@@ -111,9 +122,9 @@ export default function Home() {
                     ))}
                   </select>
                 </div>
-                <button className="mt-2 bg-pickall-primary hover:bg-opacity-50 bg-opacity-90  text-white w-fit text-sm py-1 px-5 rounded">
+                <Link href={'/step_6'} className="mt-2 bg-pickall-primary hover:bg-opacity-50 bg-opacity-90  text-white w-fit text-sm py-1 px-5 rounded">
                   Next
-                </button>
+                </Link>
               </section>
             </form>
           </main>
