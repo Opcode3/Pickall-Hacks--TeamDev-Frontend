@@ -51,18 +51,13 @@ export default function Home() {
             <form onSubmit={ e => registrationFromHandler(e)} className=' w-[500px] mx-auto mt-[80px] mb-[60px]'>
               <h1 className=' text-3xl font-bold w-fit'>List your Car</h1>
               <div className="text-xs flex items-center pb-3">
-                <span className='pr-3'>7 of 10 steps</span> |
-                <span className='px-3'>Next: Safety and quality standard</span> |
+                <span className='pr-3'>7 of 8 steps</span> |
                 <span className='ml-3 bg-pickall-primary hover:bg-opacity-90 px-2 rounded-xl cursor-pointer text-white py-1'>View all steps</span>
               </div>
               <section className='grid gap-2'>
-                <h3 className=' font-semibold mb-0'>Your Car Photos</h3>
-                <CarGallery />
-                <div className="">
-                  <label className=" text-sm font-light" htmlFor="">License plate number?</label>
-                  <input type='number' placeholder="Plate number" className=" focus:border-pickall-primary px-3 py-2 text-xs font-normal border outline-none block w-full border-gray-500 rounded-sm" required />
-                </div>
-                <button className='mt-2 bg-pickall-primary hover:bg-opacity-50 bg-opacity-90  text-white w-fit text-sm py-1 px-5 rounded'>Next</button>
+                <h3 className=' font-semibold mb-0'>Safety and quality standard</h3>
+                
+                <button className='mt-2 bg-pickall-primary hover:bg-opacity-50 bg-opacity-90  text-white w-fit text-sm py-1 px-5 rounded'>Publish</button>
               </section>
             </form>
           </main>
