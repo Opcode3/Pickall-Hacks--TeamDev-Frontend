@@ -49,7 +49,7 @@ const UserLayout = ({ children }: UserLayoutProps) => {
   const menuList = [
     { name: "Login", url: "/account/login", section: 0 },
     { name: "Register", url: "/account/register", section: 0 },
-    { name: "Become a host", url: "/become-a-host", section: 1, icon: <CarIcon />,},
+    { name: "List your car", url: "/become-a-host", section: 1, icon: <CarIcon />,},
     { name: "How Pickall-Car Hire Works", url: "/how-pickall-car-hire-works",section: 2, icon: <KeyIcon />,},
     { name: "Seek Help", url: "/help", section: 0, icon: <SupportIcon /> },
   ];
