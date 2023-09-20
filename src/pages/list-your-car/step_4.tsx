@@ -78,7 +78,7 @@ export default function Home() {
                     className=" focus:border-pickall-primary px-3 py-2 text-xs font-normal border outline-none block w-full border-gray-500 rounded-sm"
                   >
                     {primaryGoal.map((goal) => (
-                      <option value={goal}>{goal}</option>
+                      <option key={goal} value={goal}>{goal}</option>
                     ))}
                   </select>
                 </div>
@@ -91,7 +91,7 @@ export default function Home() {
                     className=" focus:border-pickall-primary px-3 py-2 text-xs font-normal border outline-none block w-full border-gray-500 rounded-sm"
                   >
                     {currentUse.map((goal) => (
-                      <option value={goal}>{goal}</option>
+                      <option key={goal} value={goal}>{goal}</option>
                     ))}
                   </select>
                 </div>
@@ -104,7 +104,7 @@ export default function Home() {
                     className=" focus:border-pickall-primary px-3 py-2 text-xs font-normal border outline-none block w-full border-gray-500 rounded-sm"
                   >
                     {share.map((goal) => (
-                      <option value={goal}>{goal}</option>
+                      <option key={goal} value={goal}>{goal}</option>
                     ))}
                   </select>
                 </div>

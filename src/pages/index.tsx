@@ -29,7 +29,7 @@ export default function Home() {
             <div className="grid grid-cols-[250px_auto] mx-auto gap-4 w-fit">
               <section className='bg-white border px-2 my-8 rounded h-[400px]'></section>
               <section className='rounded min-h-[400px] px-2 py-8 grid gap-3 w-[800px]'>
-                <CarViewItem url="" />
+                <CarViewItem />
                 <CarViewItem />
                 <CarViewItem />
               </section>

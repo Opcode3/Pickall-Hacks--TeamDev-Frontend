@@ -62,17 +62,17 @@ const UserLayout = ({ children }: UserLayoutProps) => {
     <div>
       <header className="relative">
         <nav className=" border-b h-16 px-[8%] flex items-center justify-between">
-          <a href="/" className="w-fit h-fit rounded-sm inline-block relative">
+          <Link href="/" className="w-fit h-fit rounded-sm inline-block relative">
             <Image src={'/images/logo.png'} width={100} height={32} alt="" />
-          </a>
+          </Link>
           <ul className=" flex items-center gap-6">
             <li>
-              <a
+              <Link
                 href="/list-your-car"
                 className="border border-black rounded-sm text-sm text-[#333] hover:bg-gray-200 transition-all font-normal py-[6px] px-3"
               >
                 List your car
-              </a>
+              </Link>
             </li>
             <li onClick={ e => setMenuToggle(!menuToggle)} className={`flex transition-colors border ${ menuToggle ? ' border-pickall-primary border-opacity-30 bg-pickall-primary bg-opacity-25 ': ' border-transparent' } w-fit hover:bg-pickall-primary hover:bg-opacity-25 py-1 px-2 rounded items-center gap-[2px]`}>
               <span className="block w-[22px]">
@@ -105,9 +105,9 @@ const UserLayout = ({ children }: UserLayoutProps) => {
       <footer className=" bg-pickall-primary bg-opacity-25 px-[8%] py-8">
         <div className="grid grid-cols-9 min-h-[350px]">
           <span className="col-span-3 w-36 h-10 rounded-sm inline-block">
-            <a href="/" className="w-fit h-fit rounded-sm inline-block relative">
+            <Link href="/" className="w-fit h-fit rounded-sm inline-block relative">
                 <Image src={'/images/pickall-black.png'} width={300} height={32} alt="" />
-            </a>
+            </Link>
           </span>
           
           <ul className=" col-span-2">

@@ -98,8 +98,8 @@ export default function Home() {
                     Car features
                   </label>
                   <div className=" flex flex-wrap gap-2">
-                    {features.map((feature) => (
-                      <CheckInput label={feature} />
+                    {features.map((feature, index) => (
+                      <CheckInput key={index} label={feature} />
                     ))}
                   </div>
                 </div>
@@ -107,7 +107,7 @@ export default function Home() {
                   <label className=" text-sm" htmlFor="">
                     Car description
                     <small className="block">
-                      Tell guest what makes your car unique and why they'll love
+                      Tell guest what makes your car unique and why they$&apos;ll love
                       driving it.
                     </small>
                   </label>

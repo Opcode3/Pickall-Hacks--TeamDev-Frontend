@@ -6,6 +6,7 @@ import Input from '@/components/formControl/input'
 import { useRef } from 'react'
 import Button from '@/components/formControl/button'
 import InputLabel from '@/components/formControl/inputLabel'
+import Link from 'next/link'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -30,9 +31,9 @@ export default function Home() {
               <section className='grid gap-2'>
                 <InputLabel placeholder='Email address' htmlRef={emailRef} type='text' />
                 <InputLabel placeholder='Password' htmlRef={passwordRef} type='password' />
-                <span className=' text-xs block text-right'> <a href="/account/forgot-password" className='text-pickall-primary transition-all hover:underline'>Forgot Password?</a> </span>
+                <span className=' text-xs block text-right'> <Link href="/account/forgot-password" className='text-pickall-primary transition-all hover:underline'>Forgot Password?</Link> </span>
                 <Button label='Sign in' />
-                <span className=' block text-sm mt-5 mb-2 text-center'>New on our platform? <a href="/account/register" className=' text-pickall-primary transition-all hover:underline'>Create an account</a> </span>
+                <span className=' block text-sm mt-5 mb-2 text-center'>New on our platform? <Link href="/account/register" className=' text-pickall-primary transition-all hover:underline'>Create an account</Link> </span>
               </section>
             </form>
           </main>

@@ -81,33 +81,33 @@ export default function Home() {
                     className=" focus:border-pickall-primary px-3 py-2 text-xs font-normal border outline-none block w-full border-gray-500 rounded-sm"
                   >
                     {primaryGoal.map((goal) => (
-                      <option value={goal}>{goal}</option>
+                      <option key={goal} value={goal}>{goal}</option>
                     ))}
                   </select>
                 </div>
                 <div className="">
                   <label className=" text-xs font-light" htmlFor="">
-                    What is the shortest possible trip you'll accept?
+                    What is the shortest possible trip you&apos;ll accept?
                   </label>
                   <select
                     name=""
                     className=" focus:border-pickall-primary px-3 py-2 text-xs font-normal border outline-none block w-full border-gray-500 rounded-sm"
                   >
                     {tripDuration.map((goal) => (
-                      <option value={goal}>{goal}</option>
+                      <option key={goal} value={goal}>{goal}</option>
                     ))}
                   </select>
                 </div>
                 <div className="">
                   <label className=" text-xs font-light" htmlFor="">
-                    What is the longest possible trip you'll accept?
+                    What is the longest possible trip you&apos;ll accept?
                   </label>
                   <select
                     name=""
                     className=" focus:border-pickall-primary px-3 py-2 text-xs font-normal border outline-none block w-full border-gray-500 rounded-sm"
                   >
                     {maxTripDuration.map((goal) => (
-                      <option value={goal}>{goal}</option>
+                      <option key={goal} value={goal}>{goal}</option>
                     ))}
                   </select>
                 </div>

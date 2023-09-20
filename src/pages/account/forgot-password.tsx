@@ -6,6 +6,7 @@ import Input from '@/components/formControl/input'
 import { useRef } from 'react'
 import Button from '@/components/formControl/button'
 import InputLabel from '@/components/formControl/inputLabel'
+import Link from 'next/link'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -40,7 +41,7 @@ export default function Home() {
                 <InputLabel placeholder='Last Name' htmlRef={lastNameRef} type='text' />
                 <InputLabel placeholder='Phone Number' htmlRef={phoneRef} type='number' />
                 <Button label='Continue' />
-                <span className=' block text-sm mt-5 mb-2 text-center'>Already have an account? <a href="/account/login" className=' text-pickall-primary transition-all hover:underline'>Log in</a> </span>
+                <span className=' block text-sm mt-5 mb-2 text-center'>Already have an account? <Link href="/account/login" className=' text-pickall-primary transition-all hover:underline'>Log in</Link> </span>
               </section>
             </form>
           </main>
